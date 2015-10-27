@@ -32,24 +32,21 @@
             <div class="container">
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.html">Home</a></li>
+                        <li class="active"><a href="/">Home</a></li>
                         <li>
-                            <a href="#apparel" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Apparel <span class="caret"></span></a>
+                            <a  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Apparel <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="rugby.html">Rugby</a></li>
-                                <li><a href="netball.html">Netball</a></li>
-                                <li><a href="hockey.html">Hockey</a></li>
-                                <li><a href="soccer.html">Soccer</a></li>
-                                <li><a href="league.html">League</a></li>
-                                <li><a href="touch-rugby.html">Touch Rugby</a></li>
-                                <li><a href="outrigging.html">Outrigging</a></li>
-                                <li><a href="apparel.html">Off Field Apparel</a></li>
+                                {% set data = cms.apparelgroups %}
+                                {% set data = data|sort('name') %}
+                                {% for object in data %}
+                                    <li><a href="{{ url(object) }}">{{ object.name }}</a></li>
+                                {% endfor %}
                             </ul>
                         </li>
-                        <li><a href="#AboutUs">About Us</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="testimonial.html">Testimonial</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="{{ url(cms.aboutus) }}">{{ cms.aboutus.name }}</a></li>
+                        <li><a href="{{ url(cms.gallery) }}">{{ cms.gallery.name }}</a></li>
+                        <li><a href="{{ url(cms.testimonial) }}">{{ cms.testimonial.name }}</a></li>
+                        <li><a href="{{ url(cms.contactus) }}">{{ cms.contactus.name }}</a></li>
                     </ul>
                 </div>
             </div>

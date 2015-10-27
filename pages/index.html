@@ -14,130 +14,88 @@
 {# http://www.webhook.com/docs/template-inheritance-blocks/ #}
 {% extends "templates/partials/base.html" %}
 
-{# This sets our page <title>. It will append "- Homepage" to the site title defined in base. #}
-{% block title %}{% parent %} - Homepage{% endblock %}
+{# This sets our page <title>
+    . It will append "- Homepage" to the site title defined in base. #}
+    {% block title %}{% parent %} {% endblock %}
 
-{% block content %}
+    {% block content %}
 
-                          <!-- Carousel
+    <!-- Carousel
     ================================================== -->
-                          <div class="container">
-                              <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                                  <!-- Indicators -->
-                                  <ol class="carousel-indicators">
-                                      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                      <li data-target="#myCarousel" data-slide-to="1"></li>
-                                      <li data-target="#myCarousel" data-slide-to="2"></li>
-                                  </ol>
-                                  <div class="carousel-inner" role="listbox">
-                                      <div class="item active">
-                                          <img class="first-slide" src="/static/imgs/bnnr2b.jpg" alt="First slide">
-                                          <div class="container">
-                                              <div class="carousel-caption">
-                                              </div>
-                                          </div>
-                                      </div>
-                                      <div class="item">
-                                          <img class="second-slide" src="/static/imgs/bnnr1.jpg" alt="First slide">
-                                          <div class="container">
-                                              <div class="carousel-caption">
-                                              </div>
-                                          </div>
-                                      </div>
-                                      <div class="item">
-                                          <img class="third-slide" src="/static/imgs/bnnr3.jpg" alt="Third slide">
-                                          <div class="container">
-                                              <div class="carousel-caption">
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                                  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                                      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                                      <span class="sr-only">Previous</span>
-                                  </a>
-                                  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                                      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                                      <span class="sr-only">Next</span>
-                                  </a>
-                              </div>
-                          </div>
-                          <!-- /.carousel -->
-                          <!-- Main Content Are
+    <div class="container">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                {% for row in cms.home.featured_items %}
+                {% if loop.first %}
+                <li data-target="#myCarousel" data-slide-to="{{loop.index}}" class="active"></li>
+                {% else %}
+                <li data-target="#myCarousel" data-slide-to="{{loop.index}}"></li>
+                {% endif %}
+                {% endfor %}
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                {% for row in cms.home.featured_items %}
+                {% if loop.first %}
+                <div class="item active">
+                    <a href="{{row.link}}"><img src="{{ row.image.url }}" alt="{{ row.title }}" /></a>
+                    <div class="container">
+                        <div class="carousel-caption">
+                            {{ row.title }}
+                        </div>
+                    </div>
+                </div>
+                {% else %}
+                <div class="item">
+                    <img src="{{ row.image.url }}" alt="{{ row.title }}" />
+                    <div class="container">
+                        <div class="carousel-caption">
+                            {{ row.title }}
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    <!-- /.carousel -->
+    <!-- Main Content Are
     ================================================== -->
-                          <div class="container marketing">
-                              <!-- Three columns of text below the carousel -->
-                              <div class="row">
-                                  <div class="col-lg-4 c2a">
-                                      <a href="#">
-                                          <h1>CHECK OUT<br>OUR GALLERY</h1>
-                                      </a>
-                                  </div><!-- /.col-lg-4 -->
-                                  <div class="col-lg-4 c2a">
-                                      <a href="#">
-                                          <h1>TESTIMONIALS</h1>
-                                      </a>
-                                  </div><!-- /.col-lg-4 -->
-                                  <div class="col-lg-4 c2a">
-                                      <a href="#">
-                                          <h1>DOWNLOAD<br>OUR CATALOGUE</h1>
-                                      </a>
-                                  </div><!-- /.col-lg-4 -->
-                              </div><!-- /.row -->
-                              <hr class="featurette-divider" style="margin: 0 0 40px">
-                              <h1>SPORT APPAREL CATEGORIES</h1>
-                              <!-- Four columns of text below the Call to action Buttons -->
-                              <div class="row">
-                                  <div class="col-lg-3 gear">
-                                      <a href="#">
-                                          <img src="/static/imgs/gear/Rugby.png" />
-                                          <h2>Rugby</h2>
-                                      </a>
-                                  </div><!-- /.col-lg-3 -->
-                                  <div class="col-lg-3 gear">
-                                      <a href="#">
-                                          <img src="/static/imgs/gear/Netball.png" />
-                                          <h2>Netball</h2>
-                                      </a>
-                                  </div><!-- /.col-lg-3 -->
-                                  <div class="col-lg-3 gear">
-                                      <a href="#">
-                                          <img src="/static/imgs/gear/Hockey.png" />
-                                          <h2>HOCKEY</h2>
-                                      </a>
-                                  </div><!-- /.col-lg-3 -->
-                                  <div class="col-lg-3 gear">
-                                      <a href="#">
-                                          <img src="/static/imgs/gear/Soccer.png" />
-                                          <h2>Soccer</h2>
-                                      </a>
-                                  </div><!-- /.col-lg-3 -->
-                                  <div class="col-lg-3 gear">
-                                      <a href="#">
-                                          <img src="/static/imgs/gear/League.png" />
-                                          <h2>League</h2>
-                                      </a>
-                                  </div><!-- /.col-lg-3 -->
-                                  <div class="col-lg-3 gear">
-                                      <a href="#">
-                                          <img src="/static/imgs/gear/Touch.png" />
-                                          <h2>Touch Rugby</h2>
-                                      </a>
-                                  </div><!-- /.col-lg-3 -->
-                                  <div class="col-lg-3 gear">
-                                      <a href="#">
-                                          <img src="/static/imgs/gear/WakaAma.png" />
-                                          <h2>Outrigging</h2>
-                                      </a>
-                                  </div><!-- /.col-lg-3 -->
-                                  <div class="col-lg-3 gear">
-                                      <a href="#">
-                                          <img src="/static/imgs/gear/Basketball.png" />
-                                          <h2>Off Field Apparel</h2>
-                                      </a>
-                                  </div><!-- /.col-lg-3 -->
-                              </div><!-- /.row -->
-                              <!-- /END THE FEATURETTES -->
-                          </div><!-- /.container -->
+    <div class="container marketing">
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+            {% for row in cms.home.buttons %}
+            <div class="col-lg-4 c2a">
+                <a href="{{ row.link }}">
+                    <h1>{{ row.title }}</h1>
+                </a>
+            </div><!-- /.col-lg-4 -->
+            {% endfor %}
+        </div><!-- /.row -->
+        <hr class="featurette-divider" style="margin: 0 0 40px">
 
-{% endblock %}
+        <h1>{{ cms.home.category_header }}</h1>
+        <!-- Four columns of text below the Call to action Buttons -->
+
+        <div class="row">
+            {% for relation in cms.home.featured_apparel %}
+            <div class="col-lg-3 gear hvr-grow-rotate">
+                <a href="{{url(relation)}}">
+                    <img src="{{relation.featured_image.url}}" />
+                    <h2>{{relation.Name}}</h2>
+                </a>
+            </div><!-- /.col-lg-3 -->
+            {% endfor %}
+        </div><!-- /.row -->
+        <!-- /END THE FEATURETTES -->
+    </div><!-- /.container -->
+    {% endblock %}
