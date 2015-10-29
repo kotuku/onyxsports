@@ -40,6 +40,11 @@
     <link href="/static/css/carousel.css" rel="stylesheet">
     <link href="/static/css/hover-min.css" rel="stylesheet">
     <link href="/static/fonts/fonts.css" rel="stylesheet">
+	<link href="/static/css/movingboxes.css" media="screen" charset="utf-8" rel="stylesheet">
+	<!--[if lt IE 9]>
+	<link type="text/css" href="/static/css/movingboxes-ie.css" rel="stylesheet" media="screen" />
+<![endif]-->
+
     <!-- build:css /static/css/minified.css -->
     <!-- endbuild -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
@@ -72,6 +77,18 @@
     <script src="/static/javascript/main.js"></script>
     <script src="/static/javascript/bootstrap.js"></script>
     <script src="/static/javascript/ie10-viewport-bug-workaround.js"></script>
+	<script src="/static/javascript/jquery.movingboxes.js" charset="utf-8"></script>
+
+<!-- Optional plugins -->
+<script src="/static/javascript/jquery.easing.1.2.js"></script>
+
+<!-- Required script -->
+<script>
+$(function(){
+ $('#boxes').movingBoxes(); // add any non-default options inside here
+});
+</script>
+
     <!-- endbuild -->
     {% block scripts_extra %}{% endblock %}
 
