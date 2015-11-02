@@ -1,4 +1,4 @@
-{# ------------------------------------------------------- #}
+﻿{# ------------------------------------------------------- #}
 
 {# YOUR BASE TEMPLATE. EVERYTHING GETS LOADED INTO THIS PAGE. #}
 
@@ -76,11 +76,9 @@
     <!-- build:js /static/javascript/minified.js -->
     <script src="/static/javascript/main.js"></script>
     <script src="/static/javascript/bootstrap.js"></script>
-    <script src="/static/javascript/ie10-viewport-bug-workaround.js"></script>
 	<script src="/static/javascript/jquery.movingboxes.js" charset="utf-8"></script>
-
-<!-- Optional plugins -->
-<script src="/static/javascript/jquery.easing.1.2.js"></script>
+    <script src="/static/javascript/jquery.easing.1.2.js"></script>
+    <!-- endbuild -->
 
 <!-- Required script -->
 <script>
@@ -89,7 +87,7 @@ $(function(){
 });
 </script>
 
-    <!-- endbuild -->
+
     {% block scripts_extra %}{% endblock %}
 
     {# Google Analytics code. Feel free to remove. #}
