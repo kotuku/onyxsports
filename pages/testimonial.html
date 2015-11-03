@@ -9,43 +9,31 @@
 {# Confused what extends and blocks do? Watch a primer: #}
 {# http://www.webhook.com/docs/template-inheritance-blocks/ #}
 {% extends "templates/partials/base.html" %}
-{# This sets our page title
-    . It will append this testimonial's name to the site title defined in base.html #}
-    {% block title %}{% parent %} - {{ cms.testimonial.name }}{% endblock %}
-    {% block content %}
+{# This sets our page title. It will append this testimonial's name to the site title defined in base.html #}
+{% block title %}{% parent %} - {{ cms.testimonial.name }}{% endblock %}
+{% block content %}
+<div class="container">
 
-    <div class="container">
+    <div class="col-lg-8 apprl">
+        <!-- Left Column -->
+        <h1>{{ cms.contactus.name }}</h1>
+        {% for row in cms.testimonial.testimonials %}
+        <figure data-type="quote" class="wy-figure-right wy-figure-small">
+            <blockquote>
+               {{ row.quote }}<cite>{{ row.citation }}</cite>
+            </blockquote>
+        </figure>
+        {% endfor %}
 
-        <div class="col-lg-8 apprl">
-            <!-- Left Column -->
-            <h1>{{ cms.testimonial.name }}</h1>
+    </div><!-- /.col-lg-8 -->
+    <!-- Right Column -->
+    <div class="col-lg-4 apprl">
+        {% include "templates/partials/features.html" %}
+        <hr>
+        <h3>Contact Us</h3>
+        {% include "templates/partials/contact.html" %}
+    </div><!-- /.col-lg-4 -->
 
-			<div class="col-lg-4">
-				{{ cms.testimonial.testimonial_pic }}
-				{{ cms.testimonial.testimonial_text }}
-			</div>
+</div>
 
-			<div class="col-lg-4">
-				{{ cms.testimonial.testimonial_pic }}
-				{{ cms.testimonial.testimonial_text }}
-			</div>
-
-			<div class="col-lg-4">
-				{{ cms.testimonial.testimonial_pic }}
-				{{ cms.testimonial.testimonial_text }}
-			</div>
-
-
-
-        </div><!-- /.col-lg-8 -->
-        <!-- Right Column -->
-        <div class="col-lg-4 apprl">
-            {% include "templates/partials/features.html" %}
-            <hr>
-            <h3>Contact Us</h3>
-            {% include "templates/partials/contact.html" %}
-        </div><!-- /.col-lg-4 -->
-
-    </div>
-
-    {% endblock %}
+{% endblock %}
