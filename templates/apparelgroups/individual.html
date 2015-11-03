@@ -42,18 +42,10 @@
             <h1>{{item.name}}</h1>
             {{item.description|safe}}
         </div><!-- /.col-lg-8 -->
+
         <!-- Right Column -->
         <div class="col-lg-4 apprl">
-            <h1>{{ cms.features.name }}</h1>
-            {% for row in cms.features.buttons %}
-            <div class="c2a">
-                <a href="{{ row.link }}">
-                    <h1>{{ row.label }}</h1>
-                </a>
-            </div><!-- /.col-lg-4 -->
-            {% endfor %}
-
-
+            {% include "templates/partials/features.html" %}
             <hr>
             <h3>Request a Quote</h3>
             {% include "templates/partials/contact.html" %}

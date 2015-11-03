@@ -9,32 +9,28 @@
 {# Confused what extends and blocks do? Watch a primer: #}
 {# http://www.webhook.com/docs/template-inheritance-blocks/ #}
 {% extends "templates/partials/base.html" %}
-{# This sets our page <title>. It will append this testimonial's name to the site title defined in base.html #}
-{% block title %}{% parent %} - {{ cms.testimonial.name }}{% endblock %}
-{% block content %}
-  <h1>{{ cms.testimonial.name }}</h1>
-  <ul>
-      <li>
-        <strong>Name: </strong>
-        {{ cms.testimonial.name }}
-      </li>
-      <li>
-        <strong>Create Date: </strong>
-        {# Format the date. You can use PHP's date function to format as needed. http://php.net/manual/en/function.date.php #}
-        {{ cms.testimonial.create_date|date('F d Y') }}
-      </li>
-      <li>
-        <strong>Last Updated: </strong>
-        {# Format the date. You can use PHP's date function to format as needed. http://php.net/manual/en/function.date.php #}
-        {{ cms.testimonial.last_updated|date('F d Y') }}
-      </li>
-      <li>
-        <strong>Preview URL: </strong>
-        {{ cms.testimonial.preview_url }}
-      </li>
-      <li>
-        <strong>Slug: </strong>
-        {{ cms.testimonial.slug }}
-      </li>
-  </ul>
-{% endblock %}
+{# This sets our page title
+    . It will append this testimonial's name to the site title defined in base.html #}
+    {% block title %}{% parent %} - {{ cms.testimonial.name }}{% endblock %}
+    {% block content %}
+
+    <div class="container">
+
+        <div class="col-lg-8 apprl">
+            <!-- Left Column -->
+            <h1>{{ cms.testimonial.name }}</h1>
+
+
+
+        </div><!-- /.col-lg-8 -->
+        <!-- Right Column -->
+        <div class="col-lg-4 apprl">
+            {% include "templates/partials/features.html" %}
+            <hr>
+            <h3>Contact Us</h3>
+            {% include "templates/partials/contact.html" %}
+        </div><!-- /.col-lg-4 -->
+
+    </div>
+
+    {% endblock %}

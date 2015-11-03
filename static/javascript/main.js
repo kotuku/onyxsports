@@ -3,9 +3,9 @@
     // Contact
     $('#send').click(function () {
         $.ajax({
-            url: $(".frm").attr('action'),
+            url: $("#frm").attr('action'),
             method: 'POST',
-            data: $('.frm').serialize(),
+            data: $('#frm').serialize(),
             dataType: 'json',
             beforeSend: function () { $('#send').attr('value', 'Message sending.....'); },
             success: function (data) { $('#send').attr('value', 'Message sent successfully'); },
