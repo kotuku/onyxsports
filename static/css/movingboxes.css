@@ -75,20 +75,21 @@ a.mb-scrollButtons {
 	height: 58px;
 	background: transparent url(../images/arrows.png) no-repeat;
 	position: absolute;
-	top: 50%;
+	bottom: 0;
 	margin-top: -29px; /* if you change the arrow images, you may have to adjust this (1/2 height of arrow image) */
 	cursor: pointer;
 	text-decoration: none;
 	outline: 0;
 	border: 0;
+	z-index: 10;
 }
 a.mb-scrollButtons.mb-left {
 	background-position: left top;
-	left: -45px;
+	left: 0;
 }
 a.mb-scrollButtons.mb-right {
 	background-position: right top;
-	right: -45px;
+	right: 0;
 }
 a.mb-scrollButtons.mb-left:hover {
 	background-position: left bottom;
