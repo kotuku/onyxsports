@@ -18,6 +18,8 @@
     . It will append "- Homepage" to the site title defined in base. #}
     {% block title %}{% parent %} {% endblock %}
 
+{% block body_attributes %}data-search-index="false"{% endblock %}
+
     {% block content %}
 
 <!-- Carousel

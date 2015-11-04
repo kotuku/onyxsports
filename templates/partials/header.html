@@ -1,4 +1,6 @@
 <header>
+
+
     <nav class="navbar navbar-inverse navbar-static-top">
         <div class="container">
             <div class="navbar-header">
@@ -11,17 +13,17 @@
                 <a class="navbar-brand" href="/"><img src="/static/imgs/logo-onyx.png" alt="ONYX CUSTOM APPAREL"></a>
             </div>
             <div class="top-conts">
-                <a href="#">
+                <a href="#search" data-toggle="modal">
                     <div class="circ-ic">
                         <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
                     </div>
                 </a>
-                <a href="#">
+                <a href="{{url(cms.contactus)}}">
                     <div class="circ-ic">
                         <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
                     </div>
                 </a>
-                <a href="#">
+                <a href="{{url(cms.contactus)}}">
                     <div class="circ-ic">
                         <span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>
                     </div>
@@ -30,16 +32,16 @@
         </div>
         <div class="row">
             <div class="container">
-                <div id="navbar" class="navbar-collapse collapse">
+                <div id="navbar" class="navbar-collapse collapse" data-search-index="false">
                     <ul class="nav navbar-nav">
                         <li><a href="/">Home</a></li>
                         <li>
-                            <a  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Apparel <span class="caret"></span></a>
+                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Apparel <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 {% set data = cms.apparelgroups %}
                                 {% set data = data|sort('name') %}
                                 {% for object in data %}
-                                    <li><a href="{{ url(object) }}">{{ object.name }}</a></li>
+                                <li><a href="{{ url(object) }}">{{ object.name }}</a></li>
                                 {% endfor %}
                             </ul>
                         </li>

@@ -53,6 +53,8 @@
     .wh-search-term-in-page {
       font-weight: bold;
     }
+
+
   </style>
 
 {% endblock %}
@@ -61,24 +63,42 @@
 
   {# SEARCH RESULTS WILL GO IN HERE. #}
 
-  <div id="tipue_search_content"></div>
+<div class="container">
 
-{% endblock %}
+    <div class="col-lg-8 apprl">
+        <!-- Left Column -->
+        <h1>{{ cms.contactus.name }}</h1>
 
-{% block scripts_extra %}
+        <div id="tipue_search_content"></div>
+
+
+    </div><!-- /.col-lg-8 -->
+    <!-- Right Column -->
+    <div class="col-lg-4 apprl">
+        {% include "templates/partials/features.html" %}
+        <hr>
+        <h3>Contact Us</h3>
+        {% include "templates/partials/contact.html" %}
+    </div><!-- /.col-lg-4 -->
+
+</div>
+
+    {% endblock %}
+
+    {% block scripts_extra %}
     {# DO NOT MINIFY THIS FILE #}
     <script src="/.wh/searchjson.js"></script>
     <script src="http://cms.webhook.com/cdn/js/webhook-tipue.min.js"></script>
 
     <script>
-    $(document).ready(function() {
-         $('#tipue_search_input').tipuesearch({
-            highlightEveryTerm: true,
-            descriptiveWords: 100
-         });
-    });
+        $(document).ready(function () {
+            $('#tipue_search_input').tipuesearch({
+                highlightEveryTerm: true,
+                descriptiveWords: 100
+            });
+        });
     </script>
-{% endblock %}
+    {% endblock %}
 
 
 
