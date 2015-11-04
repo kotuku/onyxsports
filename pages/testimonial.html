@@ -19,6 +19,7 @@
         <h1>{{ cms.testimonial.name }}</h1>
         {% for row in cms.testimonial.testimonials %}
         <figure data-type="quote" class="wy-figure-right wy-figure-small">
+            <img src="{{row.image|imageSize(200, 200)}}" />
             <blockquote>
                {{ row.quote }}<cite>{{ row.citation }}</cite>
             </blockquote>
