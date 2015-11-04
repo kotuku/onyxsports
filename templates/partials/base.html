@@ -74,15 +74,20 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Modal Header</h4>
+                    <h4 class="modal-title">Search</h4>
                 </div>
                 <div class="modal-body">
                     <form action="/search-results/" class="search-form" method="get" data-search-index="false">
-                        <input type="text" placeholder="Search Site" id="tipue_search_input" name="q" class="form-control">
+                        <div class="form-group">
+                            <input type="text" placeholder="Search Site" id="tipue_search_input" name="q" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" id="search" name="search" value="Search" class="btn btn-primary" />
+                        </div>
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
                 </div>
             </div>
 
