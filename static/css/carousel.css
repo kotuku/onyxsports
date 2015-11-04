@@ -126,6 +126,27 @@ body {
   letter-spacing: -1px;
 }
 
+/* Testimonials
+------------------------- */
+figure.wy-figure-right.wy-figure-small {
+  width: 50%;
+	float: left;
+}
+
+figure.wy-figure-right.wy-figure-small blockquote {
+	font-size:14px;
+}
+
+figure.wy-figure-right.wy-figure-small cite {
+    width: 100%;
+    display: block;
+    text-align: right;
+	color: rgba(35,152,235,1);
+}
+
+figure.wy-figure-right.wy-figure-small cite:before {
+    content:"- ";
+}
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
