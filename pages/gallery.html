@@ -24,7 +24,7 @@
             {% for row in cms.gallery.galleries %}
         <h3>{{row.name}}</h3>
         <p>{{row.description}}</p>
-            <div id="blueimp-gallery" class="blueimp-gallery">
+            <div id="blueimp-gallery" class="blueimp-gallery" data-use-bootstrap-modal="false">
                 <!-- The container for the modal slides -->
                 <div class="slides"></div>
                 <!-- Controls for the borderless lightbox -->
@@ -57,7 +57,7 @@
                     </div>
                 </div>
             </div>
-            <div id="links">
+            <div id="{{ cms.gallery.name }}">
                 {% for image in row.gallery %}
                 <a href="{{ image.url }}" title="{{ image.caption }}" data-gallery>
                     <img src="{{ image|imageSize(100, 100) }}" alt="{{ image.caption }}">
