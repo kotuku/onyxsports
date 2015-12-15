@@ -250,7 +250,7 @@ div#Gallery a img {
 }
 }
 
-@media  (min-width: 479px) {
+@media  (max-width: 480px) {
 .col-lg-4.c2a {
     width: 100%;
 	float:none;
