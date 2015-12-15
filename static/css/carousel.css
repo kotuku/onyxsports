@@ -239,7 +239,7 @@ div#Gallery a img {
 }
 
 
-@media (min-width: 735px) {
+@media  (min-width: 665px) {
 .col-lg-4.c2a {
     width: 33.33333333%;
 	float:left;
@@ -247,6 +247,17 @@ div#Gallery a img {
 
 .col-lg-3 {
 	width: 24.6%;
+}
+}
+
+@media  (min-width: 479px) {
+.col-lg-4.c2a {
+    width: 100%;
+	float:none;
+}
+
+.col-lg-3 {
+	width: 24.4%;
 }
 }
 
