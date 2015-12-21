@@ -43,16 +43,16 @@
                 <a href="{{row.link}}"><img src="{{ row.image.url }}" alt="{{ row.title }}" /></a>
                 <div class="container">
                     <div class="carousel-caption">
-                        {{ row.title }}
+						<a href="{{row.link}}">{{ row.title }}</a>
                     </div>
                 </div>
             </div>
             {% else %}
             <div class="item">
-                <img src="{{ row.image.url }}" alt="{{ row.title }}" />
+                <a href="{{row.link}}"><img src="{{ row.image.url }}" alt="{{ row.title }}" /></a>
                 <div class="container">
                     <div class="carousel-caption">
-                        {{ row.title }}
+						<a href="{{row.link}}">{{ row.title }}</a>
                     </div>
                 </div>
             </div>

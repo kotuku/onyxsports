@@ -198,6 +198,17 @@ div#Gallery a img {
 	 font-size: 24px;
  }
 
+.carousel-caption a:link,
+.carousel-caption a:visited,
+.carousel-caption a:active {
+	font-size: 28px;
+	color: rgba(245,245,245,0.7);
+}
+.carousel-caption a:hover {
+	font-size: 28px;
+	color: rgba(245,245,245,0.7);
+	text-decoration: none;
+}
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
