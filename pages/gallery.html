@@ -60,7 +60,7 @@
             <div id="{{ cms.gallery.name }}">
                 {% for image in row.gallery %}
                 <a href="{{ image.url }}" title="{{ image.caption }}" data-gallery>
-                    <img src="{{ image|imageSize(100, 100) }}" alt="{{ image.caption }}">
+                    <img src="{{ image|imageCrop(100, 100) }}" alt="{{ image.caption }}">
                 </a>
                 {% endfor %}
             </div>
