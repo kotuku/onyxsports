@@ -40,7 +40,7 @@
             {% for row in cms.home.featured_items %}
             {% if loop.first %}
             <div class="item active">
-                <a href="{{row.link}}"><img src="{{ row.image.url }}" alt="{{ row.title }}" /></a>
+                <a href="{{row.link}}"><img src="{{ row.image|imageCrop(1140, 400)  }}" alt="{{ row.title }}" /></a>
                 <div class="container">
                     <div class="carousel-caption">
 						<a href="{{row.link}}">{{ row.title }}</a>
@@ -49,7 +49,7 @@
             </div>
             {% else %}
             <div class="item">
-                <a href="{{row.link}}"><img src="{{ row.image.url }}" alt="{{ row.title }}" /></a>
+                <a href="{{row.link}}"><img src="{{ row.image|imageCrop(1140, 400) }}" alt="{{ row.title }}" /></a>
                 <div class="container">
                     <div class="carousel-caption">
 						<a href="{{row.link}}">{{ row.title }}</a>
