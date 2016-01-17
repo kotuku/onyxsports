@@ -1278,8 +1278,13 @@ h2,
 h3,
 .h3 {
   margin-top: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
+
+h3, .h3 {
+  clear:both;
+}
+
 h1 small,
 .h1 small,
 h2 small,
@@ -6550,18 +6555,25 @@ button.close {
 }
 .carousel-caption {
   position: absolute;
-  right: 15%;
   bottom: 20px;
-  left: 15%;
+  min-height: 85px;
+  width: 100%;
+  /*right: 15%;
+  left: 15%;*/
   z-index: 10;
   padding-top: 20px;
   padding-bottom: 20px;
   color: #fff;
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+  background-color: rgba(0,0,0, .75);
 }
 .carousel-caption .btn {
   text-shadow: none;
+}
+.item .container {
+    padding-right: 0;
+    padding-left: 0;
 }
 @media screen and (min-width: 768px) {
   .carousel-control .glyphicon-chevron-left,
@@ -6582,8 +6594,8 @@ button.close {
     margin-right: -15px;
   }
   .carousel-caption {
-    right: 20%;
-    left: 20%;
+    /*right: 20%;
+    left: 20%;*/
     padding-bottom: 30px;
   }
   .carousel-indicators {

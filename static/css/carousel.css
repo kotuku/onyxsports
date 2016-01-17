@@ -7,6 +7,10 @@ body {
   color: #5a5a5a;*/
 }
 
+h3, .h3 {
+  clear:both;
+}
+
 
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
@@ -150,13 +154,13 @@ figure.wy-figure-right.wy-figure-small cite:before {
 
 figure.wy-figure-right.wy-figure-small img {
     width: 150px;
+    height: 150px;
     margin: 0 auto;
     display: block;
     background-color: rgba(255,255,255,0.9);
-    -webkit-border-radius: 75px;
-    -moz-border-radius: 75px;
-    border-radius: 75px;
-
+	-webkit-clip-path: circle(75px at center);
+	-moz-clip-path: circle(75px at center);
+	clip-path: circle(75px at center);
 }
 
 
@@ -201,6 +205,7 @@ div#Gallery a img {
 .carousel-caption a:link,
 .carousel-caption a:visited,
 .carousel-caption a:active {
+	font-family: 'oswaldmedium';
 	font-size: 28px;
 	color: rgba(245,245,245,0.7);
 }
@@ -209,6 +214,11 @@ div#Gallery a img {
 	color: rgba(245,245,245,0.7);
 	text-decoration: none;
 }
+
+div#Gallery a:last-child {
+    margin-bottom: 30px;
+}
+
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
