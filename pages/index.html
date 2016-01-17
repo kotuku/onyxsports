@@ -92,7 +92,7 @@
         {% for relation in cms.home.featured_apparel %}
         <div class="col-lg-3 gear hvr-grow-rotate">
             <a href="{{url(relation)}}">
-                <img src="{{relation.featured_image.url}}" />
+                <img src="{{relation.featured_image|imageCrop(258, 274)}}" />
                 <h2>{{relation.name}}</h2>
             </a>
         </div><!-- /.col-lg-3 -->
