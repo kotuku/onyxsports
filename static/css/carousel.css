@@ -52,6 +52,9 @@ h3, .h3 {
 .carousel-caption {
   z-index: 10;
 }
+.carousel-caption:empty {
+	display: none;
+}
 
 /* Declare heights because of positioning of img element */
 .carousel .item {
@@ -202,14 +205,14 @@ div#Gallery a img {
 	 font-size: 24px;
  }
 
-.carousel-caption a:link,
-.carousel-caption a:visited,
-.carousel-caption a:active {
+a:link .carousel-caption,
+a:visited .carousel-caption,
+a:active .carousel-caption {
 	font-family: 'oswaldmedium';
 	font-size: 28px;
 	color: #fff;
 }
-.carousel-caption a:hover {
+a:hover .carousel-caption {
 	font-size: 28px;
 	color: rgba(245,245,245,0.7);
 	text-decoration: none;
