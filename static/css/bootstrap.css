@@ -6526,7 +6526,7 @@ button.close {
 }
 .carousel-indicators {
   position: absolute;
-  bottom: 10px;
+  bottom: 0px;
   left: 50%;
   z-index: 15;
   width: 60%;
@@ -6555,8 +6555,8 @@ button.close {
 }
 .carousel-caption {
   position: absolute;
-  bottom: 20px;
-  min-height: 85px;
+  bottom: 0px;
+  min-height: 105px;
   width: 100%;
   /*right: 15%;
   left: 15%;*/
@@ -6575,6 +6575,11 @@ button.close {
     padding-right: 0;
     padding-left: 0;
 }
+  .carousel-indicators {
+    bottom: 0px;
+	display: none;
+  }
+
 @media screen and (min-width: 768px) {
   .carousel-control .glyphicon-chevron-left,
   .carousel-control .glyphicon-chevron-right,
@@ -6599,7 +6604,8 @@ button.close {
     padding-bottom: 30px;
   }
   .carousel-indicators {
-    bottom: 20px;
+    bottom: 0px;
+	display: none;
   }
 }
 .clearfix:before,
