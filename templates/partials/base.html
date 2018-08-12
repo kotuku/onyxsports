@@ -1,4 +1,4 @@
-{# ------------------------------------------------------- #}
+﻿{# ------------------------------------------------------- #}
 
 {# YOUR BASE TEMPLATE. EVERYTHING GETS LOADED INTO THIS PAGE. #}
 
@@ -46,14 +46,14 @@
         <link type="text/css" href="/static/css/movingboxes-ie.css" rel="stylesheet" media="screen" />
     <![endif]-->
 
-    <!-- build:css /static/css/minified.css -->
-    <!-- endbuild -->
+    
+    
     <link href="/static/css/bootstrap.css" rel="stylesheet">
     <link href="/static/css/carousel.css" rel="stylesheet">
     <link href="/static/css/hover.css" rel="stylesheet">
     <link href="/static/css/movingboxes.css" media="screen" charset="utf-8" rel="stylesheet">
     <link rel="stylesheet" href="/static/css/bootstrap-image-gallery.css">
-    
+  
 
     <link href="/static/fonts/fonts.css" rel="stylesheet">
 
@@ -118,19 +118,23 @@
     {# Put your JS in here and we'll minify it into one file. No CDN scripts. More info: #}
     {# http://www.webhook.com/docs/minify-your-js-and-css/ #}
 
-    <!-- build:js /static/javascript/minified.js -->
-    <!-- endbuild -->
+    
+    
     <script src="/static/javascript/main.js"></script>
     <script src="/static/javascript/bootstrap.js"></script>
     <script src="/static/javascript/jquery.movingboxes.js" charset="utf-8"></script>
     <script src="/static/javascript/jquery.easing.1.2.js"></script>
     <script src="/static/javascript/bootstrap-image-gallery.js"></script>
     
+
     <!-- Required script -->
-    <script>
-        $(function () {
-            $('#boxes').movingBoxes(); // add any non-default options inside here
-        });
+
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+    $(function() {
+        $('#boxes').movingBoxes(); // add any non-default options inside here
+    });});
     </script>
 
 
