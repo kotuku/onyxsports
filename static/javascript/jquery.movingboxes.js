@@ -10,7 +10,7 @@
 		// To avoid scope issues, use 'base' instead of 'this'
 		// to reference this class from internal events and functions.
 		var o, base = this;
-
+        
 		// Access to jQuery and DOM versions of element
 		base.$el = $(el).addClass('mb-slider');
 		base.el = el;
@@ -151,7 +151,7 @@
 
 			// check panel height after all images load
 			base.imagesLoaded(function(){
-				base.setSizes(true);
+				base.setSizes(false);
 				base.setWrap(base.curPanel);
 
 				// animate to chosen start panel - starting from the first panel makes it look better
@@ -487,20 +487,20 @@
 	$.movingBoxes.defaultOptions = {
 		// Appearance
 		startPanel   : 1,         // start with this panel
-		reducedSize  : 0.65,       // non-current panel size: 80% of panel size
-		fixedHeight  : true,     // if true, slider height set to max panel height; if false, slider height will auto adjust.
+		reducedSize  : 0.8,       // non-current panel size: 80% of panel size
+		fixedHeight  : false,     // if true, slider height set to max panel height; if false, slider height will auto adjust.
 
 		// Behaviour
 		initAnimation: true,      // if true, movingBoxes will initialize, then animate into the starting slide (if not the first slide)
 		stopAnimation: false,     // if true, movingBoxes will force the animation to complete immediately, if the user selects the next panel
 		hashTags     : true,      // if true, hash tags are enabled
-		wrap         : true,     // if true, the panel will loop through the panels infinitely
+		wrap         : false,     // if true, the panel will loop through the panels infinitely
 		buildNav     : false,     // if true, navigation links will be added
 		navFormatter : null,      // function which returns the navigation text for each panel
 		easing       : 'swing',   // anything other than "linear" or "swing" requires the easing plugin
 
 		// Times
-		speed              : 1200, // animation time in milliseconds
+		speed              : 500, // animation time in milliseconds
 		delayBeforeAnimate : 0,   // time to delay in milliseconds before MovingBoxes animates to the selected panel
 
 		// Selectors & classes

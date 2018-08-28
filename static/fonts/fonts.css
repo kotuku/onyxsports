@@ -5,14 +5,9 @@
 @font-face {
     font-family: 'league_gothicCnRg';
     src: url('leaguegothic-condensedregular-webfont.eot');
-    src: url('leaguegothic-condensedregular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('leaguegothic-condensedregular-webfont.woff2') format('woff2'),
-         url('leaguegothic-condensedregular-webfont.woff') format('woff'),
-         url('leaguegothic-condensedregular-webfont.ttf') format('truetype'),
-         url('leaguegothic-condensedregular-webfont.svg#league_gothicCnRg') format('svg');
+    src: url('leaguegothic-condensedregular-webfont.eot?#iefix') format('embedded-opentype'), url('leaguegothic-condensedregular-webfont.woff') format('woff'), url('leaguegothic-condensedregular-webfont.ttf') format('truetype'), url('leaguegothic-condensedregular-webfont.svg#league_gothicCnRg') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
 
 
@@ -21,14 +16,9 @@
 @font-face {
     font-family: 'league_gothicregular';
     src: url('leaguegothic-regular-webfont.eot');
-    src: url('leaguegothic-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('leaguegothic-regular-webfont.woff2') format('woff2'),
-         url('leaguegothic-regular-webfont.woff') format('woff'),
-         url('leaguegothic-regular-webfont.ttf') format('truetype'),
-         url('leaguegothic-regular-webfont.svg#league_gothicregular') format('svg');
+    src: url('leaguegothic-regular-webfont.eot?#iefix') format('embedded-opentype'), url('leaguegothic-regular-webfont.woff') format('woff'), url('leaguegothic-regular-webfont.ttf') format('truetype'), url('leaguegothic-regular-webfont.svg#league_gothicregular') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
 
 
@@ -37,14 +27,9 @@
 @font-face {
     font-family: 'oswaldbold';
     src: url('oswald-bold-webfont.eot');
-    src: url('oswald-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('oswald-bold-webfont.woff2') format('woff2'),
-         url('oswald-bold-webfont.woff') format('woff'),
-         url('oswald-bold-webfont.ttf') format('truetype'),
-         url('oswald-bold-webfont.svg#oswaldbold') format('svg');
+    src: url('oswald-bold-webfont.eot?#iefix') format('embedded-opentype'), url('oswald-bold-webfont.woff') format('woff'), url('oswald-bold-webfont.ttf') format('truetype'), url('oswald-bold-webfont.svg#oswaldbold') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
 
 
@@ -53,40 +38,25 @@
 @font-face {
     font-family: 'oswaldlight';
     src: url('oswald-light-webfont.eot');
-    src: url('oswald-light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('oswald-light-webfont.woff2') format('woff2'),
-         url('oswald-light-webfont.woff') format('woff'),
-         url('oswald-light-webfont.ttf') format('truetype'),
-         url('oswald-light-webfont.svg#oswaldlight') format('svg');
+    src: url('oswald-light-webfont.eot?#iefix') format('embedded-opentype'), url('oswald-light-webfont.woff') format('woff'), url('oswald-light-webfont.ttf') format('truetype'), url('oswald-light-webfont.svg#oswaldlight') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
     font-family: 'oswaldextralight';
     src: url('oswald-extralight-webfont.eot');
-    src: url('oswald-extralight-webfont.eot?#iefix') format('embedded-opentype'),
-         url('oswald-extralight-webfont.woff2') format('woff2'),
-         url('oswald-extralight-webfont.woff') format('woff'),
-         url('oswald-extralight-webfont.ttf') format('truetype'),
-         url('oswald-extralight-webfont.svg#oswaldextralight') format('svg');
+    src: url('oswald-extralight-webfont.eot?#iefix') format('embedded-opentype'), url('oswald-extralight-webfont.woff') format('woff'), url('oswald-extralight-webfont.ttf') format('truetype'), url('oswald-extralight-webfont.svg#oswaldextralight') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
     font-family: 'oswaldmedium';
     src: url('oswald-medium-webfont.eot');
-    src: url('oswald-medium-webfont.eot?#iefix') format('embedded-opentype'),
-         url('oswald-medium-webfont.woff2') format('woff2'),
-         url('oswald-medium-webfont.woff') format('woff'),
-         url('oswald-medium-webfont.ttf') format('truetype'),
-         url('oswald-medium-webfont.svg#oswaldmedium') format('svg');
+    src: url('oswald-medium-webfont.eot?#iefix') format('embedded-opentype'), url('oswald-medium-webfont.woff') format('woff'), url('oswald-medium-webfont.ttf') format('truetype'), url('oswald-medium-webfont.svg#oswaldmedium') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
 
 
@@ -95,12 +65,7 @@
 @font-face {
     font-family: 'oswald_regularregular';
     src: url('oswald-regular-webfont.eot');
-    src: url('oswald-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('oswald-regular-webfont.woff2') format('woff2'),
-         url('oswald-regular-webfont.woff') format('woff'),
-         url('oswald-regular-webfont.ttf') format('truetype'),
-         url('oswald-regular-webfont.svg#oswald_regularregular') format('svg');
+    src: url('oswald-regular-webfont.eot?#iefix') format('embedded-opentype'), url('oswald-regular-webfont.woff') format('woff'), url('oswald-regular-webfont.ttf') format('truetype'), url('oswald-regular-webfont.svg#oswald_regularregular') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }

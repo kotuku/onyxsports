@@ -6950,3 +6950,17 @@ div.carousel-caption:empty {
 	margin-top: 0px;
 	margin-bottom: 8px;
 }
+
+/* Mobile Updates */
+@media (max-width: 767px) {
+    header {
+        height: 93px;
+    }
+
+    .top-conts {
+        display: none;
+    }
+
+
+}
+
