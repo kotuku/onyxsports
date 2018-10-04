@@ -23,7 +23,10 @@
             data: $("#frm").serialize(),
             dataType: 'json',
             beforeSend: function () { $('#send').attr('value', 'Message sending.....'); },
-            success: function (data) { $('#send').attr('value', 'Message sent successfully'); },
+            success: function (data) {
+                $('#send').attr('value', 'Message sent successfully');
+                dataLayer.push({ 'event': 'formSubmitted', 'frm': 'Contact Us' });
+            },
             error: function (err) { $('#send').attr('value', 'There was an error!'); }
         });
     });
