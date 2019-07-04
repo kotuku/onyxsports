@@ -1,0 +1,298 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+  /*padding-bottom: 40px;
+  color: #5a5a5a;*/
+}
+
+h3, .h3 {
+  clear:both;
+}
+
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+  position: relative;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper > .container {
+  padding-right: 0;
+  padding-left: 0;
+}
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.navbar-wrapper .navbar .container {
+  width: 1170px;
+}
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  height: auto;
+  margin-bottom: 30px;
+  margin-top: 0px;
+  overflow: auto;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+}
+.carousel-caption:empty {
+	display: none;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: auto;
+  background-color: #777;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: auto;
+}
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: normal;
+}
+.marketing .col-lg-4 p {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.apprl .c2a {
+  display: table;
+  width: 100%;
+  margin-bottom: 11px;
+  text-align: center;
+}
+
+.c2a {
+  display: table;
+}
+
+.c2a a:link, .c2a a:visited, .c2a a:active {
+  width: 100%;
+  height: 126px;
+  background-color: rgba(245,245,245,0.7);
+  display: table-cell;
+  vertical-align: middle;
+  text-decoration: none;
+}
+
+.c2a a:hover {
+  background-color: rgba(245,245,245,0.9);
+  text-decoration: none;
+}
+
+.c2a a h1 {
+	padding: 0;
+	margin: 0 18px;
+    font-family: 'oswaldextralight';
+	font-size: 38px;
+	color: rgba(10,10,10,1.0);
+	text-transform: uppercase;
+}
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+/* Testimonials
+------------------------- */
+figure.wy-figure-right.wy-figure-small {
+  width: 50%;
+	float: left;
+}
+
+figure.wy-figure-right.wy-figure-small blockquote {
+	font-size:14px;
+}
+
+figure.wy-figure-right.wy-figure-small cite {
+    width: 100%;
+    display: block;
+    text-align: right;
+	color: rgba(35,152,235,1);
+}
+
+figure.wy-figure-right.wy-figure-small cite:before {
+    content:"- ";
+}
+
+figure.wy-figure-right.wy-figure-small img {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    display: block;
+    background-color: rgba(255,255,255,0.9);
+	-webkit-clip-path: circle(75px at center);
+	-moz-clip-path: circle(75px at center);
+	clip-path: circle(75px at center);
+}
+
+
+/* Gallery
+------------------------- */
+div#Gallery a {
+    width: 25%;
+    padding: 15px 10px;
+    box-sizing: border-box;
+    display: block;
+    float: left;
+}
+
+div#Gallery a:after {
+    clear: both;
+}
+
+div#Gallery a img {
+    width: 100%;
+	background-color: rgba(255,255,255,0.8);
+    background: -moz-linear-gradient(top, rgba(255,255,255,0.5) 0%, rgba(0,0,0,0.5) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.5)), color-stop(100%,rgba(0,0,0,0.5)));
+    background: -webkit-linear-gradient(top, rgba(255,255,255,0.5) 0%,rgba(0,0,0,0.5) 100%);
+    background: -o-linear-gradient(top, rgba(255,255,255,0.5) 0%,rgba(0,0,0,0.5) 100%);
+    background: -ms-linear-gradient(top, rgba(255,255,255,0.5) 0%,rgba(0,0,0,0.5) 100%);
+    background: linear-gradient(to bottom, rgba(255,255,255,0.5) 0%,rgba(0,0,0,0.5) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99ffffff', endColorstr='#99000000',GradientType=0 );
+    border-top: #fafafa 1px solid;
+    border-bottom: #fafafa 1px solid;
+    padding: 8px 0;
+}
+
+.blueimp-gallery>.prev, .blueimp-gallery>.next, .blueimp-gallery>.close, .blueimp-gallery>.title {
+	display:block;
+}
+
+ .blueimp-gallery>.title {
+	 color: #2398eb;
+	 font-size: 24px;
+ }
+
+a:link .carousel-caption,
+a:visited .carousel-caption,
+a:active .carousel-caption {
+	font-family: 'oswaldmedium';
+	font-size: 28px;
+	color: #fff;
+}
+a:hover .carousel-caption {
+	font-size: 28px;
+	color: rgba(245,245,245,0.7);
+	text-decoration: none;
+}
+
+div#Gallery a:last-child {
+    margin-bottom: 30px;
+}
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+  /* Navbar positioning foo */
+  .navbar-wrapper {
+    margin-top: 0px;
+  }
+  .navbar-wrapper .container {
+    padding-right: auto;
+    padding-left: auto;
+  }
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  /* The navbar becomes detached from the top, so we round the corners */
+  .navbar-wrapper .navbar {
+    border-radius: 0px;
+  }
+
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  .featurette-heading {
+    margin-top: 120px;
+  }
+}
+
+
+@media  (min-width: 665px) {
+.col-lg-4.c2a {
+    width: 33.33333333%;
+	float:left;
+}
+
+.col-lg-3 {
+	width: 24.6%;
+}
+}
+
+@media  (max-width: 480px) {
+.col-lg-4.c2a {
+    width: 100%;
+	float:none;
+}
+
+.col-lg-3 {
+	width: 24.4%;
+}
+}
+
+@media (max-width: 415px) {
+.col-lg-4.c2a {
+    width: 100%;
+	float:left;
+}
+
+.col-lg-3 {
+	width: 50%;
+	float: left;
+}
+}
