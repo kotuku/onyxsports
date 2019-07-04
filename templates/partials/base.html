@@ -20,7 +20,7 @@
   {# Grab the title and description from the CMS general settings. #}
   {% set site_title = getSetting('site_name')%}
   {% set site_description = getSetting('site_description')%}
-
+  {% set site_keywords = getSetting('site_keywords')%}
 <head>
     <!-- Google Tag Manager -->
     <script>
@@ -37,6 +37,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>{% block title %}{{ site_title|default('Webhook site') }}{% endblock %}</title>
     <meta name="description" content="{% block description %}{{ site_description|default('Built with Webhook.') }}{% endblock %}">
+    <meta name="keywords" content="{{ site_keywords }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google-site-verification" content="poEtLwAbOMOb8as46PsYbWLCy19lBF-VHU_3Km_Myo0" />
     <link rel="shortcut icon" href="/static/imgs/favicon.ico">
