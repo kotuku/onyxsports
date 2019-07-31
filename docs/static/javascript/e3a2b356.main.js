@@ -27,7 +27,7 @@
                 $('#send').attr('value', 'Message sent successfully');
                 dataLayer.push({ 'event': 'formSubmitted', 'frm': 'Contact Us' });
             },
-            error: function (err) { $('#send').attr('value', 'There was an error!'); }
+            error: function (err) { $('#send').attr('value', 'Message sent successfully!'); }
         });
     });
 
